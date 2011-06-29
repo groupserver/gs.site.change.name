@@ -1,0 +1,18 @@
+<div id="gs-site-change-name">
+  <h2>Change the Site Name</h2>
+  <p>
+    The site name is shown at the top of every page on the site, in
+    the body of many page, and in email messages sent from this site.
+    To change the site name, carry out the following tasks.
+  </p>
+  <ol>
+    <li>Go to the <cite>Change Name</cite> page.</li>
+    <li>Enter the name for the site in the
+      <samp class="entry">Name</samp> entry.
+    </li>
+    <li>Click the <samp class="button">Change</samp> button.
+      The name of the site will be updated.
+    </li>
+  </ol>
+</div><!--gs-site-change-name-->
+

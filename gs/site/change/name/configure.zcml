@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:rdb="http://namespaces.zope.org/rdb"
+  xmlns:sqlos="http://namespaces.sqlobject.org/sqlos"
+  xmlns:five="http://namespaces.zope.org/five">
+  
+  <browser:page 
+    for="Products.GSContent.interfaces.IGSSiteFolder"
+    name="admin_change_name.html"
+    class=".changename.ChangeName"
+    permission="zope2.ManageProperties"/>
+    
+  <browser:viewlet name="gs-site-change-name"
+    manager="gs.help.interfaces.IAdminHelp"
+    template="browser/templates/help.pt"
+    permission="zope.Public"
+    weight="2" />
+    
+</configure>
+
