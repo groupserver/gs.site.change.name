@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 import os
 from setuptools import setup, find_packages
 from version import get_version
@@ -27,14 +27,20 @@ setup(name='gs.site.change.name',
     url='http://groupserver.org/',
     license='other',
     packages=find_packages(exclude=['ez_setup']),
-    namespace_packages=['gs', 'gs.site', 'gs.site.change',],
+    namespace_packages=['gs', 'gs.site', 'gs.site.change', ],
     include_package_data=True,
     zip_safe=True,
     install_requires=[
         'setuptools',
-        # -*- Extra requirements: -*-
+        'zope.formlib',
+        'zope.interface',
+        'zope.schema',
+        'zope.viewlet',
+        'Zope2',
+        'gs.content.form',
+        'gs.help',
+        'gs.site.change.base',
     ],
     entry_points="""
     # -*- Entry points: -*-
     """,)
-
