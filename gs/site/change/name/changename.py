@@ -6,7 +6,7 @@ from interfaces import IGSSiteName
 
 
 class ChangeName(SiteForm):
-    label = u'Change the Site Name'
+    label = u'Change the site name'
     pageTemplateFileName = 'browser/templates/changename.pt'
     template = ZopeTwoPageTemplateFile(pageTemplateFileName)
     form_fields = form.Fields(IGSSiteName, render_context=False)
