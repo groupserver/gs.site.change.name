@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright © 2013, 2014 OnlineGroups.net and Contributors. -->
+<!-- All Rights Reserved. -->
+
+<!-- This software is subject to the provisions of the Zope Public -->
+<!-- License, Version 2.1 (ZPL).  A copy of the ZPL should accompany this -->
+<!-- distribution. -->
+
+<!-- THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED -->
+<!-- WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED -->
+<!-- WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND -->
+<!-- FITNESS FOR A PARTICULAR PURPOSE. -->
 <configure xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:rdb="http://namespaces.zope.org/rdb"
-  xmlns:sqlos="http://namespaces.sqlobject.org/sqlos"
-  xmlns:five="http://namespaces.zope.org/five">
-  
-  <browser:page 
-    for="Products.GSContent.interfaces.IGSSiteFolder"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           i18n_domain="groupserver">
+
+  <include package="zope.viewlet" file="meta.zcml" />
+
+  <browser:page
     name="admin_change_name.html"
+    for="Products.GSContent.interfaces.IGSSiteFolder"
     class=".changename.ChangeName"
     permission="zope2.ManageProperties"/>
-    
-  <browser:viewlet name="gs-site-change-name"
-    manager="gs.help.interfaces.IAdminHelp"
-    template="browser/templates/help.pt"
-    permission="zope.Public"
-    weight="2" />
 
   <!--Link for the Site Admin page-->
-  <browser:viewlet name="gs-site-change-name-link"
+  <browser:viewlet
+    name="gs-site-change-name-link"
     manager="gs.site.change.base.interfaces.ISiteAdminLinks"
     template="browser/templates/changelink.pt"
     permission="zope2.ManageProperties"
     weight="2" />
-    
-</configure>
 
+  <browser:viewlet
+    name="gs-site-change-name"
+    manager="gs.help.interfaces.IAdminHelp"
+    template="browser/templates/help.pt"
+    permission="zope.Public"
+    weight="2" />
+</configure>
