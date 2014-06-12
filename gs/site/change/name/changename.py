@@ -15,7 +15,7 @@
 from __future__ import absolute_import, unicode_literals
 from zope.formlib import form
 from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
-from gs.content.form import SiteForm
+from gs.content.form.base import SiteForm
 from .interfaces import IGSSiteName
 
 
