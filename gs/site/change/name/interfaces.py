@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
 # Copyright © 2012, 2013, 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
@@ -11,14 +11,17 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 from __future__ import unicode_literals
 from zope.interface import Interface
 from zope.schema import TextLine
+from . import GSMessageFactory as _
 
 
 class IGSSiteName(Interface):
-    name = TextLine(title='Site name',
-      description='The name of your site. It will be used in the body of '
-                  'pages, email messages, and at the top of every page.',
-      required=True)
+    name = TextLine(
+        title=_('Site name'),
+        description=_('The name of your site. It will be used in the body '
+                      'of pages, email messages, and at the top of every '
+                      'page.'),
+        required=True)

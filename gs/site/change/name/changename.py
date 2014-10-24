@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
 # Copyright © 2012, 2013, 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
@@ -11,16 +11,17 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 from __future__ import absolute_import, unicode_literals
 from zope.formlib import form
 from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
 from gs.content.form.base import SiteForm
 from .interfaces import IGSSiteName
+from . import GSMessageFactory as _
 
 
 class ChangeName(SiteForm):
-    label = 'Change the site name'
+    label = _('Change the site name')
     pageTemplateFileName = 'browser/templates/changename.pt'
     template = ZopeTwoPageTemplateFile(pageTemplateFileName)
     form_fields = form.Fields(IGSSiteName, render_context=False)
@@ -35,16 +36,17 @@ class ChangeName(SiteForm):
             self.request, form=self, data=data,
             ignore_request=ignore_request)
 
-    @form.action(label='Change', failure='handle_change_action_failure')
+    @form.action(label=_('Change'), failure='handle_change_action_failure')
     def handle_change(self, action, data):
         oldName = self.siteInfo.name
         self.siteInfo.siteObj.manage_changeProperties(title=data['name'])
-        self.status = 'The of this site has been '\
-            'changed to <q>%s</a> from <q>%s</q>.' % \
-            (data['name'], oldName)
+        self.status = _(
+            'status-message', 'The of this site has been changed to '
+            '<q>${newName}</q> from <q>${oldName}</q>.',
+            mapping={'newName': data['name'], 'oldName': oldName})
 
     def handle_change_action_failure(self, action, data, errors):
         if len(errors) == 1:
-            self.status = '<p>There is an error:</p>'
+            self.status = _('<p>There is an error:</p>')
         else:
-            self.status = '<p>There are errors:</p>'
+            self.status = _('<p>There are errors:</p>')
