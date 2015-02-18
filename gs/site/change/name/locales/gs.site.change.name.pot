@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-10-24 19:46+0000\n"
+"POT-Creation-Date: 2015-02-18 19:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,12 +41,11 @@ msgstr ""
 msgid "Site name"
 msgstr ""
 
-#: ./interfaces.py:24
-msgid "The name of your site. It will be used in the body of pages, email messages, and at the top of every page."
+#: ./changename.py:43
+msgid "The name of this site has been changed to <q>${newName}</q> from <q>${oldName}</q>."
 msgstr ""
 
-#. Default: "The of this site has been changed to <q>${newName}</q> from <q>${oldName}</q>."
-#: ./changename.py:43
-msgid "status-message"
+#: ./interfaces.py:24
+msgid "The name of your site. It will be used in the body of pages, email messages, and at the top of every page."
 msgstr ""
 

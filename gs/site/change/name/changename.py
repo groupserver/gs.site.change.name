@@ -41,7 +41,7 @@ class ChangeName(SiteForm):
         oldName = self.siteInfo.name
         self.siteInfo.siteObj.manage_changeProperties(title=data['name'])
         self.status = _(
-            'status-message', 'The of this site has been changed to '
+            'The name of this site has been changed to '
             '<q>${newName}</q> from <q>${oldName}</q>.',
             mapping={'newName': data['name'], 'oldName': oldName})
 
