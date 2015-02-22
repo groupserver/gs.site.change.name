@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gs.site.change.name\n"
 "POT-Creation-Date: 2015-02-22 18:21+0000\n"
-"PO-Revision-Date: 2015-02-22 18:27+0000\n"
+"PO-Revision-Date: 2015-02-22 20:50+0000\n"
 "Last-Translator: Alice Rose <heldinz@posteo.de>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/gs-site-change-name/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -26,19 +26,19 @@ msgstr "Ändern"
 #. Default: "Change the site name"
 #: ./changename.py:24
 msgid "change-site-name-form-label"
-msgstr ""
+msgstr "Name der Webseite ändern"
 
 #. Default: "<a href=\"/admin_change_name.html\">Change the
 #. <strong>name</strong></a> of this site."
 #: ./browser/templates/changelink.pt:1
 msgid "change-site-name-link"
-msgstr ""
+msgstr "<a href=\"/admin_change_name.html\">Den <strong>Namen</strong></a> dieser Webseite ändern."
 
 #. Default: "The name of this site has been changed to <q>${newName}</q> from
 #. <q>${oldName}</q>."
 #: ./changename.py:44
 msgid "change-success"
-msgstr ""
+msgstr "Der Name dieser Webseite wurde von <q>${oldName}</q> auf <q>${newName}</q> geändert."
 
 #. Default: "The name of your site. It will be used in the body of pages,
 #. email messages, and at the top of every page."
@@ -49,14 +49,14 @@ msgstr ""
 #. Default: "Site name"
 #: ./interfaces.py:23
 msgid "site-name-entry-label"
-msgstr ""
+msgstr "Name der Webseite"
 
 #. Default: "<p>There is an error:</p>"
 #: ./changename.py:51
 msgid "status-problem"
-msgstr "<p>Es gab einen Fehler: </p>"
+msgstr "<p>Es ist ein Fehler aufgetreten: </p>"
 
 #. Default: "<p>There are errors:</p>"
 #: ./changename.py:53
 msgid "status-problems"
-msgstr "<p>Es gab mehrere Fehler:</p>"
+msgstr "<p>Es sind mehrere Fehler aufgetreten:</p>"
