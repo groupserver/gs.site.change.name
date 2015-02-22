@@ -20,8 +20,9 @@ from . import GSMessageFactory as _
 
 class IGSSiteName(Interface):
     name = TextLine(
-        title=_('Site name'),
-        description=_('The name of your site. It will be used in the body '
+        title=_('site-name-entry-label', 'Site name'),
+        description=_('site-name-entry-description',
+                      'The name of your site. It will be used in the body '
                       'of pages, email messages, and at the top of every '
                       'page.'),
         required=True)

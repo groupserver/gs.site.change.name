@@ -1,6 +1,6 @@
 <li xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="gs.site.change.name"
-    i18n:translate=""
+    i18n:translate="change-site-name-link"
     id="gs-site-change-name-link">
   <a href="/admin_change_name.html">Change the <strong>name</strong></a>
   of this site.

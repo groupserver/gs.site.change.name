@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-02-18 19:24+0000\n"
+"POT-Creation-Date: 2015-02-22 18:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,35 +14,43 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./browser/templates/changelink.pt:1
-msgid "<a href=\"/admin_change_name.html\">Change the <strong>name</strong></a> of this site."
-msgstr ""
-
-#: ./changename.py:52
-msgid "<p>There are errors:</p>"
-msgstr ""
-
-#: ./changename.py:50
-msgid "<p>There is an error:</p>"
-msgstr ""
-
+#. Default: "Change"
 #: ./changename.py:39
-msgid "Change"
-msgstr ""
+msgid "change-action"
+msgstr "Change"
 
+#. Default: "Change the site name"
 #: ./changename.py:24
-msgid "Change the site name"
-msgstr ""
+msgid "change-site-name-form-label"
+msgstr "Change the site name"
 
-#: ./interfaces.py:23
-msgid "Site name"
-msgstr ""
+#. Default: "<a href=\"/admin_change_name.html\">Change the <strong>name</strong></a> of this site."
+#: ./browser/templates/changelink.pt:1
+msgid "change-site-name-link"
+msgstr "<a href=\"/admin_change_name.html\">Change the <strong>name</strong></a> of this site."
 
-#: ./changename.py:43
-msgid "The name of this site has been changed to <q>${newName}</q> from <q>${oldName}</q>."
-msgstr ""
+#. Default: "The name of this site has been changed to <q>${newName}</q> from <q>${oldName}</q>."
+#: ./changename.py:44
+msgid "change-success"
+msgstr "The name of this site has been changed to <q>${newName}</q> from <q>${oldName}</q>."
 
+#. Default: "The name of your site. It will be used in the body of pages, email messages, and at the top of every page."
 #: ./interfaces.py:24
-msgid "The name of your site. It will be used in the body of pages, email messages, and at the top of every page."
-msgstr ""
+msgid "site-name-entry-description"
+msgstr "The name of your site. It will be used in the body of pages, email messages, and at the top of every page."
+
+#. Default: "Site name"
+#: ./interfaces.py:23
+msgid "site-name-entry-label"
+msgstr "Site name"
+
+#. Default: "<p>There is an error:</p>"
+#: ./changename.py:51
+msgid "status-problem"
+msgstr "<p>There is an error:</p>"
+
+#. Default: "<p>There are errors:</p>"
+#: ./changename.py:53
+msgid "status-problems"
+msgstr "<p>There are errors:</p>"
 

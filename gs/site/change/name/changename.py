@@ -21,7 +21,7 @@ from . import GSMessageFactory as _
 
 
 class ChangeName(SiteForm):
-    label = _('Change the site name')
+    label = _('change-site-name-form-label', 'Change the site name')
     pageTemplateFileName = 'browser/templates/changename.pt'
     template = ZopeTwoPageTemplateFile(pageTemplateFileName)
     form_fields = form.Fields(IGSSiteName, render_context=False)
@@ -36,17 +36,18 @@ class ChangeName(SiteForm):
             self.request, form=self, data=data,
             ignore_request=ignore_request)
 
-    @form.action(label=_('Change'), failure='handle_change_action_failure')
+    @form.action(label=_('change-action', 'Change'), 
+                 failure='handle_change_action_failure')
     def handle_change(self, action, data):
         oldName = self.siteInfo.name
         self.siteInfo.siteObj.manage_changeProperties(title=data['name'])
-        self.status = _(
+        self.status = _('change-success',
             'The name of this site has been changed to '
             '<q>${newName}</q> from <q>${oldName}</q>.',
             mapping={'newName': data['name'], 'oldName': oldName})
 
     def handle_change_action_failure(self, action, data, errors):
         if len(errors) == 1:
-            self.status = _('<p>There is an error:</p>')
+            self.status = _('status-problem', '<p>There is an error:</p>')
         else:
-            self.status = _('<p>There are errors:</p>')
+            self.status = _('status-problems', '<p>There are errors:</p>')
