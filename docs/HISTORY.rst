@@ -1,6 +1,16 @@
 Changelog
 =========
 
+2.1.1 (2015-02-27)
+------------------
+
+* Pointing at Transifex_
+* Updating the German translation (thanks, Alice_)
+
+.. _Transifex:
+   https://www.transifex.com/projects/p/gs-site-change-name/
+.. _Alice: http://groupserver.com/p/alice
+
 2.1.0 (2014-10-24)
 ------------------
 
@@ -40,3 +50,5 @@ Changelog
 ------------------
 
 * Initial version
+
+..  LocalWords:  Changelog Transifex

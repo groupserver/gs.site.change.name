@@ -24,8 +24,12 @@ allows a site-administrator to change the name using the
 Resources
 =========
 
-- Code repository: https://github.com/groupserver/site.change.name/
-- Questions and comments to http://groupserver.org/groups/development/
+- Code repository:
+  https://github.com/groupserver/site.change.name/
+- Translations: 
+  https://www.transifex.com/projects/p/gs-site-change-name/
+- Questions and comments to
+  http://groupserver.org/groups/development/
 - Report bugs at https://redmine.iopen.net/projects/groupserver/
 
 .. _GroupServer.org: http://groupserver.org/
